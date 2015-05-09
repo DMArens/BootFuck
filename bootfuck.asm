@@ -1,7 +1,4 @@
-;
-; This is my first hello world boot sector
-;
-
+; This is my bootable brainfuck interpreter!
 org 7c00h
 
 SCREENWIDTH = 80
