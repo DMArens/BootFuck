@@ -56,9 +56,12 @@ clear_mem:
 	; the secret doesn't work.
 	mov	cx, 20
 	mov	si, secret_string
+	mov	di, TAPEBUF
+	sub di, 40
     @@:	lodsb
 	stosb
 	dec	cx
+	inc di
 	jnz	@b
 	mov	si, CODEBUF
 	mov	di, TAPEBUF
